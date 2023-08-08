@@ -1,0 +1,26 @@
+#main{
+margin: auto;
+width: 50%;
+border: 3px solid green;
+padding: 10px;
+}
+
+#get{
+    background-color: blue;
+    color: blue;
+    padding: 10px;
+    animation: colour 5s forwards;
+}
+
+#post{
+    background-color: red;
+    color: red;
+    padding: 10px;
+    animation: colour 5s forwards;
+}
+
+@keyframes colour{
+    to{
+        color: white;
+    }
+}

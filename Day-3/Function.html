@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <button id="btn">Click Me</button>
+    </body>
+    <script>
+
+        let btn=document.getElementById('btn');
+
+        // function showAlert(){
+       //     window.alert("Hello EveryOne..!");
+        // }
+
+        // check me in console..!
+        function showAlert(){
+            console.log("Hello EveryOne..!");
+        }
+
+        function add(a,b){
+            return a+b;
+        }
+
+        document.getElementById('demo').innerHTML=add(4,5);
+        btn.addEventListener('click',()=>{
+            window.alert("Hello EveryOne..!"),
+            showAlert(),
+            add(45,67),
+            document.getElementById('demo').innerHTML=add(45,59)
+        })
+
+
+    </script>
+</html>

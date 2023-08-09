@@ -1,0 +1,53 @@
+<!-- (5/9) * (fahrenheit-32) -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Celsius Calculator
+        </title>
+        <style>
+            body{
+                margin: auto;
+                width: 50%;
+            }
+            #celsius{
+                margin: auto;
+                width: 60%;
+                padding-top: 30px;
+            }
+            div{
+                padding-bottom: 20px;
+            }
+            button{
+                padding: 5px;
+                margin-left: 100px;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Fahrenheit to Celsius Convertor</h1><br>
+        <div>
+        <label>Enter Fahrenheit: </label>
+        <input type="Number" id="fahrenheit"><br>
+        </div>
+        <button id="btn" >Calculate</button>
+        <h1 id="celsius" >%</h1>
+    </body>
+    <script>
+
+        function calci(fahrenheit){
+            let f=parseInt(fahrenheit)
+            return ((5/9)*(f-32)).toFixed(2);
+        }
+
+        let fahrenheit=document.getElementById('fahrenheit')
+        let btn=document.getElementById('btn')
+        let celsius=document.getElementById('celsius')
+
+        btn.addEventListener('click',()=>{
+            celsius.innerHTML=calci(fahrenheit.value)+"%"
+        });
+
+    </script>
+</html>

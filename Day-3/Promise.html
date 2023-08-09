@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promise</title>
+</head>
+<body>
+  <h1>Provide Open Source Link</h1>
+  <input type="url" id="name" >
+  <button id="bt">Click Me</button>
+  <p id="dataList"></p>
+
+  <script>
+
+        function fetchData(url){
+            return fetch(url).then(response => response.json()).catch(error=>{
+                console.log("Error Occur...! "+error)
+                throw error
+            })
+        }
+
+        bt.onclick=()=>{
+            let url=document.getElementById('name').value
+            let data=document.getElementById('dataList')
+            let bt=document.getElementById('bt')
+           // let s=JSON.stringify(url)
+            let api=fetchData(url)
+            Promise.race([api]).then(result=>{
+                data.innerHTML=JSON.stringify(result.data.first_name+" "+result.data.email);
+            }).catch(error=>{
+                console.log("Error: "+error)
+            })
+
+        }
+    
+        
+  </script>
+</body>
+</html>

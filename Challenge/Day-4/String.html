@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String</title>
+        <style>
+            p{
+                text-align: center;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p id="college"></p>
+        <h1>
+            String slicing using JavaScript
+        </h1>
+        <p id="slice"></p>
+        <p id="substring"></p>
+        <p id="substr"></p>
+        <h1>
+            UpperCase and LowerCase
+        </h1>
+        <p id="upper"></p>
+        <p id="lower"></p>
+        <h1>
+            String Concat
+        </h1>
+        <p id="concat"></p>
+        <h1>
+            padding character
+        </h1>
+        <p id="padEnd"></p>
+        <p id="padStart"></p>
+        <h1>
+            Accessing Character of a String
+        </h1>
+        <p id="charAt"></p>
+        <p id="charCodeAt"></p>
+        <p id="bracket"></p>
+        <h1>
+            Split into Array
+        </h1>
+        <p id="arr"></p>
+    </body>
+    <script>
+        let name="Nithin" // String
+        let object=new String(name) // Object
+        let text="\\ <- BackSlash </br> \' <- Apostrophe <br> \" <- Double Quotes\n"
+        document.getElementById("demo").innerHTML=text
+        document.getElementById("college").innerHTML="K Ramakrishnan \
+        of Technology"
+        
+        // Splitting Strings into parts..!
+        // There are 3 methods for extracting a part of a string:
+        //    slice(start, end)     || slice(start)
+        //    substring(start, end) || substring(start)
+        //    substr(start, length) || substr(length)
+        let txt="Hello Everyone I am Nithin"
+        document.getElementById('slice').innerHTML=txt.slice(0,-9)
+        document.getElementById('substring').innerHTML=txt.substring(6,txt.length)
+        document.getElementById('substr').innerHTML=txt.substr(6,8) 
+
+        // toUpperCase and toLowerCase
+        document.getElementById('upper').innerHTML=name.toUpperCase()
+        document.getElementById('lower').innerHTML=name.toLowerCase()
+
+        // Concat String
+        document.getElementById('concat').innerHTML=name.concat(" ",txt)
+
+        // Padding String
+        document.getElementById('padEnd').innerHTML=txt.padEnd(20,'x')
+        document.getElementById('padStart').innerHTML=txt.padStart(20,'x')
+
+        // Accessing the Character
+        document.getElementById('charAt').innerHTML=name.charAt(0)
+        document.getElementById('charCodeAt').innerHTML=name.charCodeAt(0)
+        name[0]='A' // no change
+        document.getElementById('bracket').innerHTML=name[0]
+
+        // split
+        let arr=txt.split(" ")
+        document.getElementById('arr').innerHTML=arr;
+
+    </script>
+</html>

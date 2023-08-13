@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Replace Expression</title>
+    </head>
+    <body>
+        <p id="name">I am Nithin form Trichy</p>
+        <button id="btn">Click Me</button>
+    </body>
+    <script>
+        let name=document.getElementById('name')
+        let btn=document.getElementById('btn')
+        btn.addEventListener('click',()=>{
+            name.innerHTML=name.innerHTML.replace('Nithin','Ragul')
+        })
+    </script>
+</html>

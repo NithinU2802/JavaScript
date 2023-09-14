@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+    <body>
+        <button onclick="alert('Hello World')">OnClick</button>
+        <button onmouseout="alert('Hello World')">OnMouseOut</button>
+        <button onmouseover="alert('Hello World')">OnMouseOver</button>
+        <button onkeydown="alert('Hello World')">OnKeyDown</button>
+        <button onload="alert('On load page')">Onload</button>
+        <p id="demo"></p>
+        <p id="list"></p>
+        <p id="sort"></p>
+    </body>
+    <script>
+        let head=`<h2>Names:</h2><ul>`
+        let el=['Nithin','Rohan','Aslam']
+        for(let i of el)
+            head+=`<li>`+i+`</li>`
+        head+=`</ul>`
+        document.getElementById('demo').innerHTML=head 
+        const list=["Three","One",'Two']
+        document.getElementById('list').innerHTML=list
+        list.sort()
+        document.getElementById('sort').innerHTML=list
+    </script>
+</html>
